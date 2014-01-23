@@ -11,15 +11,6 @@ class CatalogListView(ShopListView):
     model = Catalog
     #generic_template = "shop_richcatalog/catalog_list.html"
 
-    def get_queryset(self):
-        '''
-        Return all catalogs and non-catalogued products.
-        '''
-
-        products = Product.objects.filter(active=True, catalogs=None)
-        catalogs = Catalog.objects.all()
-        return (products + catalogs)
-
 class CatalogDetailView(ShopDetailView):
     '''
     TODO.
