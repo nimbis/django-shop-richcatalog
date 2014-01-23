@@ -69,6 +69,9 @@ class SimpleTestCase(TestCase):
         self.assertEquals(catalog.slug, "test-catalog")
         self.assertEquals(len(catalog.products.all()), 2)
 
+        # verify utility methods
+        self.assertEquals(unicode(catalog), catalog.name)
+
         # delete the catalog
         catalog.delete()
         catalog = None
