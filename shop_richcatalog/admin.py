@@ -1,3 +1,4 @@
+from django.db import models
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin
 from shop_richcatalog.models import Catalog
