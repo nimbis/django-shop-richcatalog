@@ -24,7 +24,7 @@ class Catalog(MPTTModel):
             related_name="catalogs")
 
     description = models.CharField(max_length=255)
-    image = models.ImageField(upload_to="rich_catalog")
+    image = models.ImageField(upload_to="rich_catalog", null=True, blank=True)
 
     class Meta(object):
         verbose_name = _("catalog")
