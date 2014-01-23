@@ -13,15 +13,17 @@ class Catalog(MPTTModel):
 
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
-    parent = TreeForeignKey("self",
-            null=True,
-            blank=True,
-            related_name="children")
+    parent = TreeForeignKey(
+        "self",
+        null=True,
+        blank=True,
+        related_name="children")
 
-    products = models.ManyToManyField(Product,
-            null=True,
-            blank=True,
-            related_name="catalogs")
+    products = models.ManyToManyField(
+        Product,
+        null=True,
+        blank=True,
+        related_name="catalogs")
 
     description = models.CharField(max_length=255)
     image = models.ImageField(upload_to="rich_catalog", null=True, blank=True)
