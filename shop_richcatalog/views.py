@@ -5,23 +5,22 @@ from shop.models import Product
 
 class CatalogListView(ShopListView):
     '''
-    TODO.
+    Display all catalogs in a tree.
     '''
 
     model = Catalog
-    #generic_template = "shop_richcatalog/catalog_list.html"
+
 
 class CatalogDetailView(ShopDetailView):
     '''
-    TODO.
+    Display detailed catalog information.
     '''
 
     model = Catalog
-    #generic_template = "shop_richcatalog/catalog_detail.html"
 
     def get_context_data(self, **kwargs):
         '''
-        TODO.
+        Get catalog context data.
         '''
 
         # get context data from superclass
