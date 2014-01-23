@@ -1,0 +1,21 @@
+{% load mptt_tags %}
+<h2>Children:</h2>
+<ul class="root">
+    {% recursetree object.children.all %}
+    <li>
+        <a href="{% url "catalog_detail" node.slug %}">{{ node.name }}</a>
+        {% if not node.is_leaf_node %}
+        <ul class="children">
+        {{ children }}
+        </ul>
+        {% endif %}
+    </li>
+    {% endrecursetree %}
+</ul>
+
+<h2>Products:</h2>
+<ul>
+    {% for product in product_list %}
+    <li>{{ product.name }}</li>
+    {% endfor %}
+</ul>
