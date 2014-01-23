@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import patterns, url
 from shop_richcatalog.views import CatalogListView, CatalogDetailView
 
-urlpatters = patterns("",
+urlpatterns = patterns("",
         url(r"^$",
             CatalogListView.as_view(),
             name="catalog_list"),
