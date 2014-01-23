@@ -1,7 +1,7 @@
 {% load mptt_tags %}
 <h2>Children:</h2>
 <ul class="root">
-    {% recursetree object.children %}
+    {% recursetree object.children.all %}
     <li>
         <a href="{% url "catalog_detail" node.slug %}">{{ node.name }}</a>
         {% if not node.is_leaf_node %}
