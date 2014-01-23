@@ -1,6 +1,7 @@
 django<1.6
 django-discover-runner
 django-shop
+django-mptt
 image
 
 git+https://github.com/nimbis/django-shop-richproduct.git#egg=shop_richproduct
