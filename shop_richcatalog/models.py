@@ -15,7 +15,7 @@ class Catalog(MPTTModel):
     slug = models.SlugField(unique=True)
     parent = TreeForeignKey("self",
             null=True,
-            blank-True,
+            blank=True,
             related_name="children")
 
     products = models.ManyToManyField(Product,
