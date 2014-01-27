@@ -1,4 +1,6 @@
+{% extends "shop/base.html" %}
 {% load mptt_tags %}
+{% block body %}
 <ul class="root">
     {% recursetree object_list %}
     <li>
@@ -11,3 +13,4 @@
     </li>
     {% endrecursetree %}
 </ul>
+{% endblock %}

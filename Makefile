@@ -41,7 +41,7 @@ doc: check-reqs
 # code coverage
 #
 
-COVERAGE_INCLUDE='shop_richproduct/*'
+COVERAGE_INCLUDE='shop_richcatalog/*'
 
 coverage: check-reqs
 	coverage erase
