@@ -13,6 +13,7 @@ class Catalog(MPTTModel):
 
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
+
     parent = TreeForeignKey(
         "self",
         null=True,
@@ -29,8 +30,8 @@ class Catalog(MPTTModel):
     image = models.ImageField(upload_to="rich_catalog", null=True, blank=True)
 
     class Meta(object):
-        verbose_name = _("catalog")
-        verbose_name_plural = _("catalogs")
+        verbose_name = _("Catalog")
+        verbose_name_plural = _("Catalogs")
 
     class MPTTMeta(object):
         order_insertion_by = ["slug"]
