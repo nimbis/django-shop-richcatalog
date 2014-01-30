@@ -9,6 +9,8 @@ class CatalogListView(ShopListView):
     '''
 
     model = Catalog
+    template_name = 'catalog/catalog_list.html'
+    context_object_name = 'catalog_list'
 
 
 class CatalogDetailView(ShopDetailView):
@@ -17,6 +19,8 @@ class CatalogDetailView(ShopDetailView):
     '''
 
     model = Catalog
+    template_name = 'catalog/catalog_detail.html'
+    context_object_name = 'catalog'
 
     def get_context_data(self, **kwargs):
         '''
