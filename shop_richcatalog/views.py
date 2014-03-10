@@ -1,6 +1,5 @@
 from shop.views import ShopListView, ShopDetailView
 from shop_richcatalog.models import Catalog
-from shop.models import Product
 
 
 class CatalogListView(ShopListView):

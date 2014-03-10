@@ -1,5 +1,7 @@
 import os
 from django.test import TestCase
+from django.test import Client
+from shop_richcatalog.models import Catalog
 from shop_richproduct.models import RichProduct
 
 
@@ -48,8 +50,6 @@ class SimpleTestCase(TestCase):
         Create, store, update, and delete a catalog.
         '''
 
-        from shop_richcatalog.models import Catalog
-
         # create a catalog
         catalog = Catalog()
         catalog.name = "Test Catalog"
@@ -72,6 +72,28 @@ class SimpleTestCase(TestCase):
         # verify utility methods
         self.assertEquals(unicode(catalog), catalog.name)
 
+        # get url
+        self.assertEquals(catalog.get_absolute_url(), '/catalog/test-catalog/')
+
         # delete the catalog
         catalog.delete()
         catalog = None
+
+    def test_catalog_views(self):
+        '''
+        Test the catalog list and detail views.
+        '''
+        # create a catalog
+        catalog = Catalog()
+        catalog.name = "Test Catalog"
+        catalog.slug = "test-catalog"
+        catalog.save()
+
+        catalog.products.add(RichProduct.objects.get(slug="apollo"))
+        catalog.products.add(RichProduct.objects.get(slug="aurora"))
+        catalog.save()
+
+        client = Client(enforce_csrf_checks=True)
+        response = client.get(catalog.get_absolute_url())
+        self.assertEquals(response.context['catalog'].name, "Test Catalog")
+        self.assertEquals(len(response.context['product_list']), 2)

@@ -17,6 +17,6 @@ class CatalogAdmin(MPTTModelAdmin):
         models.ManyToManyField: {"widget": FilteredSelectMultiple(
             verbose_name=_("products"),
             is_stacked=False)}
-        }
+    }
 
 admin.site.register(Catalog, CatalogAdmin)
