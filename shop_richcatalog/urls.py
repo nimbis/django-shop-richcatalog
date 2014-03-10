@@ -9,4 +9,4 @@ urlpatterns = patterns(
     url(r"^(?P<slug>[0-9A-Za-z-_.//]+)/$",
         CatalogDetailView.as_view(),
         name="catalog_detail")
-    )
+)
