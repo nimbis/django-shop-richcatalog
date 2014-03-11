@@ -11,10 +11,6 @@ ifndef VIRTUAL_ENV
 	$(error VIRTUAL_ENV is undefined, try "workon" command)
 endif
 
-# check that requirements have been installed
-check-reqs: check-venv
-	-piplint requirements.txt
-
 # Install pip requirements.txt file
 reqs: check-venv
 	pip install -r requirements.txt
@@ -33,7 +29,7 @@ test: check-venv clean
 # doc
 #
 
-doc: check-reqs
+doc: check-venv
 	cd doc; make html
 	@echo "See ./doc/_build/index.html for html documentation."
 
@@ -43,7 +39,7 @@ doc: check-reqs
 
 COVERAGE_INCLUDE='shop_richcatalog/*'
 
-coverage: check-reqs
+coverage: check-venv
 	coverage erase
 	-coverage run --include=$(COVERAGE_INCLUDE) ./manage.py test
 	coverage report
