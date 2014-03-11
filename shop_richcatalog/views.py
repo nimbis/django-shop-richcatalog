@@ -27,6 +27,7 @@ class CatalogListView(ShopListView):
                 ctx.update({"product_list": product_list})
         return ctx
 
+
 class CatalogDetailView(ShopDetailView):
     '''
     Display detailed catalog information.
