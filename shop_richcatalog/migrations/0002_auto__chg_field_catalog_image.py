@@ -16,7 +16,7 @@ class Migration(SchemaMigration):
 
         # User chose to not deal with backwards NULL issues for 'Catalog.image'
         raise RuntimeError("Cannot reverse this migration. 'Catalog.image' and its values cannot be restored.")
-        
+
         # The following code is provided here to aid in writing a correct migration
         # Changing field 'Catalog.image'
         db.alter_column(u'shop_richcatalog_catalog', 'image', self.gf('django.db.models.fields.files.ImageField')(max_length=100))

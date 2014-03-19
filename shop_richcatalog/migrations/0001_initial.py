@@ -7,6 +7,10 @@ from django.db import models
 
 class Migration(SchemaMigration):
 
+    depends_on = (
+        ('shop_richproduct', '0001_initial')
+    )
+
     def forwards(self, orm):
         # Adding model 'Catalog'
         db.create_table(u'shop_richcatalog_catalog', (
