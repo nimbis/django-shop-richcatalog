@@ -8,7 +8,8 @@ from django.db import models
 class Migration(SchemaMigration):
 
     depends_on = (
-        ('shop_richproduct', '0001_initial')
+        ('shop', '0012_auto__add_field_extraorderpricefield_data'),
+        ('shop_richproduct', '0001_initial'),
     )
 
     def forwards(self, orm):
