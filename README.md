@@ -3,11 +3,10 @@ django-shop-richcatalog
 
 A rich catalog plugin for django shop.
 
-.. image:: https://travis-ci.org/nimbis/django-shop-richcatalog.svg?branch=master
- :target: https://travis-ci.org/nimbis/django-shop-richcatalog
+[![Build Status](https://travis-ci.org/nimbis/django-shop-richcatalog.svg?branch=develop)](https://travis-ci.org/nimbis/django-shop-richcatalog)
 
-.. image:: https://coveralls.io/repos/nimbis/django-shop-richcatalog/badge.png?branch=master
- :target: https://coveralls.io/r/nimbis/django-shop-richcatalog?branch=master
+[![Coverage](https://coveralls.io/repos/nimbis/django-shop-richcatalog/badge.png?branch=master)](https://coveralls.io/r/nimbis/django-shop-richcatalog?branch=master)
+
 
 Requirements
 ------------
