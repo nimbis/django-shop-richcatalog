@@ -5,7 +5,7 @@
 <ul class="root">
     {% recursetree catalog.children.all %}
     <li>
-        <a href="{% url "catalog_detail" node.slug %}">{{ node.name }}</a>
+        <a href="{% url 'catalog_detail' node.slug %}">{{ node.name }}</a>
         {% if not node.is_leaf_node %}
         <ul class="children">
         {{ children }}
