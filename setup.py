@@ -9,7 +9,7 @@ setup(
     name="django-shop-richcatalog",
     version="0.3.3",
     author="Nimbis Services, Inc.",
-    author_email="info@nimbisservices.com",
+    author_email="devops@nimbisservices.com",
     description="Rich catalog functionality for django shop.",
     license="BSD",
     packages=find_packages(exclude=["tests", ]),
