@@ -21,10 +21,12 @@ class CatalogListView(ShopListView):
         # get context data from superclass
         ctx = super(CatalogListView, self).get_context_data(**kwargs)
 
+        # optionally update the context with all products
         if getattr(settings, 'RICHCATALOG_SHOW_ALL_PRODUCTS', True):
-            product_list = Product.objects.filter(active=True)
-            if product_list:
-                ctx.update({"product_list": product_list})
+            products = Product.objects.filter(active=True).order_by('name')
+            ctx.update({'product_list': products})
+
+        # return the context
         return ctx
 
 
@@ -46,9 +48,8 @@ class CatalogDetailView(ShopDetailView):
         ctx = super(CatalogDetailView, self).get_context_data(**kwargs)
 
         # update the context with active products in this catalog
-        product_list = self.object.products.filter(active=True)
-        if product_list:
-            ctx.update({"product_list": product_list})
+        products = self.object.products.filter(active=True).order_by('name')
+        ctx.update({'product_list': products})
 
         # return the context
         return ctx

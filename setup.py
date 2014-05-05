@@ -7,9 +7,9 @@ reqs = parse_requirements("requirements/common.txt")
 # setup the project
 setup(
     name="django-shop-richcatalog",
-    version="0.3.3",
+    version="0.4.0",
     author="Nimbis Services, Inc.",
-    author_email="info@nimbisservices.com",
+    author_email="devops@nimbisservices.com",
     description="Rich catalog functionality for django shop.",
     license="BSD",
     packages=find_packages(exclude=["tests", ]),

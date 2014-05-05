@@ -1,6 +1,6 @@
 django>=1.6
 django-shop>=0.2.0
+git+https://github.com/divio/django-cms.git@develop#egg=django_cms
 django-mptt
+django-shop-richproduct
 image
-
-git+https://github.com/nimbis/django-shop-richproduct.git@v0.0.3#egg=django_shop_richproduct
