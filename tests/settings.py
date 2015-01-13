@@ -122,6 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mptt',
+    'treebeard',
     'shop',
     'shop_richproduct',
     'shop_richcatalog',
