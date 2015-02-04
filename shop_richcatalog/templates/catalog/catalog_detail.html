@@ -1,24 +1,27 @@
 {% extends "shop/base.html" %}
 {% load mptt_tags %}
+
 {% block body %}
 <h2>Children:</h2>
 <ul class="root">
-    {% recursetree catalog.children.all %}
-    <li>
-        <a href="{% url 'catalog_detail' node.slug %}">{{ node.name }}</a>
-        {% if not node.is_leaf_node %}
-        <ul class="children">
-        {{ children }}
-        </ul>
-        {% endif %}
-    </li>
-    {% endrecursetree %}
+  {% recursetree catalog.children.all %}
+  <li>
+    <a href="{% url 'catalog_detail' node.slug %}">{{ node.name }}</a>
+    {% if not node.is_leaf_node %}
+    <ul class="children">
+      {{ children }}
+    </ul>
+    {% endif %}
+  </li>
+  {% endrecursetree %}
 </ul>
 
 <h2>Products:</h2>
 <ul>
-    {% for product in product_list %}
-    <li><a href="{{ product.get_absolute_url }}">{{ product.name }}</a></li>
-    {% endfor %}
+  {% for product in product_list %}
+  <li>
+    <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+  </li>
+  {% endfor %}
 </ul>
 {% endblock %}

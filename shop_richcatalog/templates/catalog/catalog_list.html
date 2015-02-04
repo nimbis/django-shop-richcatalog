@@ -2,15 +2,15 @@
 {% load mptt_tags %}
 {% block body %}
 <ul class="root">
-    {% recursetree catalog_list %}
-    <li>
-        <a href="{% url "catalog_detail" node.slug %}">{{ node.name }}</a>
-        {% if not node.is_leaf_node %}
-        <ul class="children">
-        {{ children }}
-        </ul>
-        {% endif %}
-    </li>
-    {% endrecursetree %}
+  {% recursetree catalog_list %}
+  <li>
+    <a href="{% url "catalog_detail" node.slug %}">{{ node.name }}</a>
+    {% if not node.is_leaf_node %}
+    <ul class="children">
+      {{ children }}
+    </ul>
+    {% endif %}
+  </li>
+  {% endrecursetree %}
 </ul>
 {% endblock %}
