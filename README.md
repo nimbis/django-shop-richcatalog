@@ -25,3 +25,14 @@ Installation
 * Ensure that `django_shop_richcatalog` is in your INSTALLED APPS
 
 * Run `syncdb` or `migrate django_shop_richcatalog` if you have South installed.
+
+History
+-------
+
+v0.4.3:
+
+    * Removing pip requirement from setup.py.
+
+v0.1.0:
+
+    * Initial version.
