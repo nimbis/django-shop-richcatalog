@@ -38,3 +38,6 @@ nosetests.xml
 # Documentation
 htmlcov
 doc/_build
+
+# Flake8
+flake8.log

@@ -1,4 +1,3 @@
-import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'

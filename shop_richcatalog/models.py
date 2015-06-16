@@ -43,5 +43,6 @@ class Catalog(MPTTModel):
     def __unicode__(self):
         return self.name
 
+
 class CatalogPlugin(CMSPlugin):
     catalog = models.ForeignKey(Catalog)
