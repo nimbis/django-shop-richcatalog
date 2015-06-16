@@ -1,6 +1,7 @@
 from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from shop.models import Product
+from cms.models import CMSPlugin
 
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -41,3 +42,6 @@ class Catalog(MPTTModel):
 
     def __unicode__(self):
         return self.name
+
+class CatalogPlugin(CMSPlugin):
+    catalog = models.ForeignKey(Catalog)
