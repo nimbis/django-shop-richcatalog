@@ -45,4 +45,4 @@ class Catalog(MPTTModel):
 
 
 class CatalogPlugin(CMSPlugin):
-    catalog = models.ForeignKey(Catalog)
+    title = models.CharField(max_length=50)
