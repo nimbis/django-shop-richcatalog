@@ -29,6 +29,10 @@ Installation
 History
 -------
 
+v1.1.0:
+
+    * Added missing migration.  New plugin for shop-richcatalog.
+
 v1.0.0:
 
     * Django 1.7 is now supported.
