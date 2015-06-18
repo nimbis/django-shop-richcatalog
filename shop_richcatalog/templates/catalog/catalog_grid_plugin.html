@@ -1,0 +1,21 @@
+{% load thumbnail %}
+{% load static from staticfiles %}
+{% for catalog in catalog_list %}
+    {% if forloop.first %}<div class="row">{% endif %}
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="thumbnail">
+            {% if catalog.image %}
+                <img src="{% thumbnail catalog.image 400x200 upscale %}" alt="{{ catalog.get_name }}" />
+            {% else %}
+                <img src="{% static 'js/holder.js/400x200' %}" alt="{{ catalog.get_name }}" />
+            {% endif %}
+            <div class="caption">
+                <p class="catalog_description">{{ catalog.description }}</p>
+                <p><a href="{{ catalog.get_absolute_url }}"
+                      class="btn btn-primary btn-sm" role="button">View Products</a></p>
+            </div>
+        </div>
+    </div>
+    {% if forloop.counter|divisibleby:4 %}</div><div class="row">{% endif %}
+    {% if forloop.last %}</div>{% endif %}
+{% endfor %}
