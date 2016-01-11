@@ -26,6 +26,11 @@ Installation
 
 * Run `syncdb` or `migrate django_shop_richcatalog` if you have South installed.
 
+Contributing
+------------
+
+See the [Contributing Guidelines](CONTRIBUTING.md).
+
 History
 -------
 
