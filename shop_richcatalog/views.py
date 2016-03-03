@@ -49,7 +49,10 @@ class CatalogDetailView(ShopDetailView):
 
         # update the context with active products in this catalog
         products = self.object.products.filter(active=True).order_by('name')
-        ctx.update({'product_list': products})
+        ctx.update({
+            'product_list': products,
+            'page_sub_title': ' | ' + self.object.name,
+        })
 
         # return the context
         return ctx
