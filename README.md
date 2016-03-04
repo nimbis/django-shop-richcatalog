@@ -34,6 +34,12 @@ See the [Contributing Guidelines](CONTRIBUTING.md).
 History
 -------
 
+v2.0.0:
+
+    * Now supports (requires) Django 1.8
+
+    * Adds catalog name as "page_sub_title" for use in templates
+
 v1.1.0:
 
     * Added missing migration.  New plugin for shop-richcatalog.
