@@ -34,6 +34,11 @@ See the [Contributing Guidelines](CONTRIBUTING.md).
 History
 -------
 
+v2.0.1:
+
+    * Adding placeholder fields to the Catalog model. This allows the
+      adding of CMS content below and above each catalog.
+
 v2.0.0:
 
     * Now supports (requires) Django 1.8
