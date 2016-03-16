@@ -2,6 +2,7 @@ from django.db import models
 from mptt.models import MPTTModel, TreeForeignKey
 from shop.models import Product
 from cms.models import CMSPlugin
+from cms.models.fields import PlaceholderField
 
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
@@ -29,6 +30,14 @@ class Catalog(MPTTModel):
 
     description = models.CharField(max_length=255)
     image = models.ImageField(upload_to="rich_catalog", null=True, blank=True)
+
+    above_catalog_placeholder = PlaceholderField(
+        'above_catalog_placeholder',
+        related_name='above_catalog_placeholder')
+
+    below_catalog_placeholder = PlaceholderField(
+        'below_catalog_placeholder',
+        related_name='below_catalog_placeholder')
 
     class Meta(object):
         verbose_name = _("Catalog")
