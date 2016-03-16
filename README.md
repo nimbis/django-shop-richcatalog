@@ -34,6 +34,11 @@ See the [Contributing Guidelines](CONTRIBUTING.md).
 History
 -------
 
+v1.2.0:
+
+    * Adding placeholder fields to the Catalog model. This allows the
+      adding of CMS content below and above each catalog.
+
 v1.1.0:
 
     * Added missing migration.  New plugin for shop-richcatalog.
