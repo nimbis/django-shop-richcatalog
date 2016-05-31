@@ -41,3 +41,6 @@ doc/_build
 
 # Flake8
 flake8.log
+
+# Testing database
+db.sqlite3

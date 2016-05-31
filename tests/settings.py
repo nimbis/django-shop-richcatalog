@@ -12,8 +12,10 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': ':memory:',
-        'TEST_NAME': ':memory:',
+        'NAME': 'db.sqlite3',
+        'TEST': {
+            'NAME': 'db.sqlite3',
+        },
     },
 }
 

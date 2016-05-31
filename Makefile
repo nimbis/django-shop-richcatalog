@@ -23,7 +23,7 @@ pep8: check-venv
 	python setup.py pep8 $(PEP8_OPTS)
 
 test: check-venv clean
-	python manage.py test
+	python manage.py test --keepdb
 
 # flake8
 #
