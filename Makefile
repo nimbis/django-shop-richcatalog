@@ -48,7 +48,7 @@ COVERAGE_INCLUDE='shop_richcatalog/*'
 
 coverage: check-venv
 	coverage erase
-	-coverage run --include=$(COVERAGE_INCLUDE) ./manage.py test
+	-coverage run --include=$(COVERAGE_INCLUDE) ./manage.py test --keepdb
 	coverage report
 	coverage html
 	@echo "See ./htmlcov/index.html for coverage report"
