@@ -34,6 +34,12 @@ See the [Contributing Guidelines](CONTRIBUTING.md).
 History
 -------
 
+v3.0.0:
+
+    * Adding "root_catalog" field to the Catalog model. This allows a catalog
+      plugin to display the contents of a catalog rather than displaying all
+      catalogs.
+
 v2.0.1:
 
     * Adding placeholder fields to the Catalog model. This allows the
