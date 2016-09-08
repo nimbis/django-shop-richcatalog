@@ -14,7 +14,7 @@ setup(
     install_requires=[
         'Django',
         'django-shop >= 0.2.0',
-        'django-cms',
+        'django-cms>=3.3.1',
         'django-shop-richproduct',
         'django-mptt',
         'image',

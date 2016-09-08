@@ -11,8 +11,7 @@ A rich catalog plugin for django shop.
 Requirements
 ------------
 
-* django < 1.8
-* django >= 1.5
+* django-cms >= 3.3.1
 * django-shop
 * django-shop-richproduct
 
