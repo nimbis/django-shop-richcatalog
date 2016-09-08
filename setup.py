@@ -12,7 +12,7 @@ setup(
     license="BSD",
     packages=find_packages(exclude=["tests", ]),
     install_requires=[
-        'Django',
+        'Django<1.9',
         'django-shop >= 0.2.0',
         'django-cms>=3.3.1',
         'django-shop-richproduct',
