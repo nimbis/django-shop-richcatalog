@@ -33,6 +33,11 @@ See the [Contributing Guidelines](CONTRIBUTING.md).
 History
 -------
 
+v3.1.0:
+
+    * Adding migration required for Django CMS v3.3.1 and later, which is now
+      required for this app.
+
 v3.0.0:
 
     * Adding "root_catalog" field to the Catalog model. This allows a catalog
