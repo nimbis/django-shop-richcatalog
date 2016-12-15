@@ -24,4 +24,5 @@ class CMSCatalogPlugin(CMSPluginBase):
             context['plugin_catalog_list'] = Catalog.objects.all()
         return context
 
+
 plugin_pool.register_plugin(CMSCatalogPlugin)

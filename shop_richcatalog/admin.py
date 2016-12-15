@@ -19,4 +19,5 @@ class CatalogAdmin(MPTTModelAdmin):
             is_stacked=False)}
     }
 
+
 admin.site.register(Catalog, CatalogAdmin)
