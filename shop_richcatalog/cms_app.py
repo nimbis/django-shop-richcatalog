@@ -7,4 +7,5 @@ class RichCatalogApphook(CMSApp):
     name = _("Rich Catalog")
     urls = ["shop_richcatalog.urls"]
 
+
 apphook_pool.register(RichCatalogApphook)

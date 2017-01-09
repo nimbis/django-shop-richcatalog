@@ -16,5 +16,3 @@ script:
   - make test
   - make coverage
   - make doc
-notifications:
-  hipchat: 67a245a9dd1bee819c8c7270fd7d40@travis
